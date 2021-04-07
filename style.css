@@ -22,6 +22,11 @@ h1 {
     margin: 0;
 }
 
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
 /* ======== */
 /*  Navbar  */
 /* ======== */
@@ -33,7 +38,6 @@ h1 {
     align-items: center;
     justify-content: start;
     display: none;
-
 }
 
 .navbar__logo {
@@ -58,6 +62,10 @@ h1 {
     font-size: 30px;
 }
 
+.test-nav {
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+
 .navbar__test {
     display: flex;
     flex-direction: column;
@@ -71,10 +79,6 @@ h1 {
     letter-spacing: 5px;
     color: var(--primary-color);
     margin: 0;
-}
-
-.subnav {
-    margin: 0px 180px;
 }
 
 .subnav a {
@@ -138,6 +142,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     color: var(--primary-color);
+    margin-bottom: 40px;
 }
 
 .categories .title {
@@ -158,8 +163,45 @@ h1 {
     gap: 15px;
 }
 
+.categories__grid .category {
+    position: relative;
+    color: #fff;
+    font-family: Oswald;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    width: 100%;
+    height: 100%;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.category .img-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-overlay > p {
+    visibility: hidden;
+}
+
+.category .img-overlay:hover {
+    background-image: radial-gradient(circle at 36% 14%, rgba(0, 0, 0, 0.418), rgb(0, 0, 0));
+}
+
+.category .img-overlay:hover > p{
+    visibility: visible;
+}
+
 .categories__grid img {
-    width: 500px;
+    width: 495px;
+    height: 100%;
 }
 
 /* Grid */
@@ -167,8 +209,7 @@ h1 {
 .flex-grid {
     display: flex;
     flex-direction: row;
-    margin: 25px 150px;
-    display: none;
+    margin: 20px 150px;
 }
 
 .column-one,
@@ -196,14 +237,39 @@ h1 {
 footer {
     height: 200px;
     background-color: var(--grey-color);
+    color: var(--primary-color);
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 46px;
+    margin-left: 15px;
+}
+
+.footer__container p {
+    margin: 10px 0;
+}
+
+.footer__contact .contact-content {
+    margin-left: 20px;
 }
 
 .footer__social-media {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    width: 50%;
+    margin-top: 46px;
 }
 
 .footer__social-media .facebook,
