@@ -14,15 +14,23 @@
 <body>
     <nav class="test-nav">
         <div class="navbar__test container">
-            <div class="subnav">
-                <a href="index.html" class="navbar__logo">GRACIELA EZCARAY</a>
+            <div class="subnav" style="text-align: center;">
+                <a href="index.html" class="navbar__logo" style="font-size: 2.2rem;">GRACIELA EZCARAY</a>
                 <div class="links">
                     <a href="gallery.html">GALERIA</a>
                     <a href="">TALLER</a>
                     <a href="">SOBRE MI</a>
+                    <div class="subnav__social-media" style="display: inline-block;">
+                        <a href="" class="" style="margin-right: 2px;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="" class="">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="navbar__social-media">
+            <div class="navbar__social-media" style="display: none;">
                 <a href="" class="instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
@@ -33,60 +41,21 @@
         </div>
     </nav>
 
+    <select name="filter-techniques" id="filter-techniques" onchange="getImages(this.value)"
+        style="display: none;">
+        <option value="null">Todos</option>
+        <option value="dibujos">Dibujos</option>
+        <option value="acrilicos">Actilico</option>
+        <option value="acuarelas">Acuarelas</option>
+        <option value="oleos">Oleos</option>
+    </select>
+
     <div class="flex-grid">
         <div class="column-one">
-            <div class="flex-grid__image">
-                <img src="media/1.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/23549946_168597597069858_862215589665002282_o.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/cap campo.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/blog via.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/DSCN0232.jpg...jpg" alt="">
-            </div>
         </div>
         <div class="column-two">
-            <div class="flex-grid__image">
-                <img src="media/ceibos en....jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/criollos argentinos...jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/cru vi.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/DSCN0074.jpg...jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/DSCN0087.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/El descanso.jpg" alt="">
-            </div>
         </div>
         <div class="column-three">
-            <div class="flex-grid__image">
-                <img src="media/pensan.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/la siest.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/vias 4.jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/DSCN0246.jpg..jpg" alt="">
-            </div>
-            <div class="flex-grid__image">
-                <img src="media/dunamar.. ..jpg" alt="">
-            </div>
         </div>
     </div>
 
@@ -103,7 +72,7 @@
             </div>
             <div class="footer__social-media">
                 <p class="sm-title">MIS REDES:</p>
-                <div>
+                <div class="sm-icons">
                     <a href="" class="instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
@@ -114,5 +83,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

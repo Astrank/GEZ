@@ -50,7 +50,7 @@ img {
 
 .navbar__logo {
     font-family: Oswald;
-    font-size: 32px;
+    font-size: 2.2rem;
     letter-spacing: 5px;
     color: var(--primary-color);
     margin-left: 180px;
@@ -70,10 +70,6 @@ img {
     font-size: 30px;
 }
 
-.test-nav {
-    border-bottom: 1px solid rgb(182, 182, 182);
-}
-
 .navbar__test {
     display: flex;
     flex-direction: column;
@@ -83,7 +79,7 @@ img {
 
 .navbar__test .navbar__logo {
     font-family: Oswald;
-    font-size: 32px;
+    font-size: 2rem;
     letter-spacing: 5px;
     color: var(--primary-color);
     margin: 0;
@@ -96,11 +92,15 @@ img {
 
 .subnav a {
     color: var(--grey-color);
-    margin-right: 7px;
+    margin-right: 10px;
 }
 
 .subnav__social-media {
     display: none;
+}
+
+#insta {
+    margin-right: 0;
 }
 
 /* ====== */
@@ -129,23 +129,34 @@ img {
     margin-bottom: 40px;
 }
 
+.category:hover {
+    transform: translate(3px, -3px);
+}
+
 .categories .title {
     letter-spacing: 0.1rem;
     margin: 42px 0;
+    font-family: Oswald;
+    color: var(--primary-color);
+}
+
+.categories .title h1 {
+    font-weight: normal;
 }
 
 .categories .bottom-line {
-    border-top: solid 1px var(--grey-color);
-    width: 100px;
+    border-top: solid 1px var(--primary-color);
+    width: 60px;
     margin: auto;
-    margin-top: 17px;
+    margin-top: 12px;
 }
 
 .categories__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 1rem;
     margin: 0 1rem;
+    font-family: Oswald;
 }
 
 .categories__grid .category {
@@ -189,12 +200,29 @@ img {
     height: 100%;
 }
 
+.asd {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.asd p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+/* ========= */
+/*  Galeria  */
+/* ========= */
+
 /* Grid */
 
 .flex-grid {
     display: flex;
     flex-direction: row;
-    margin: 20px 150px;
+    margin: 0 3rem;
+    margin-bottom: 2rem;
 }
 
 .column-one,
@@ -202,15 +230,15 @@ img {
 .column-three {
     display: flex;
     flex-direction: column;
-}
-
-.flex-grid__image {
-
-    margin: 4px;
+    max-width: 33.3%;
+    margin: 0 3px;
 }
 
 .flex-grid img {
-    display: block;
+    margin: 3px;
+}
+
+.flex-grid img {
     width: 100%;
     height: auto;
 }
@@ -263,12 +291,17 @@ footer {
 
 .sm-title,
 .contact-title {
+    font-family: Oswald;
     font-weight: bold;
+}
+
+.sm-icons {
+    margin-top: 6px;
 }
 
 @media (max-width: 520px) {
     .navbar__test .navbar__logo {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .navbar__social-media {
@@ -298,5 +331,10 @@ footer {
         margin: 1rem 0;
         align-items: center;
         text-align: center;
+    }
+
+    .asd p {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
     }
 }
